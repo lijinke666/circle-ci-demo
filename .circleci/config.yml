@@ -6,8 +6,30 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Install dependencies
-        command: npm i
+          name: Install dependencies
+          command: npm i
       - run:
-        name: Tests
-        command: npm test
+          name: Tests
+          command: npm test
+  print:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - run: cat README.md
+
+workflows:
+  version: 2
+  # 并行执行
+  my-workflow:
+    jobs:
+      - build
+      - print
+
+  # 串行
+  my-workflow2:
+    jobs:
+      - build
+      - print:
+          requires:
+            - build
