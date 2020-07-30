@@ -1,0 +1,25 @@
+{
+  "name": "circle-ci-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lijinke666/circle-ci-demo.git"
+  },
+  "keywords": [
+    "circle-ci"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lijinke666/circle-ci-demo/issues"
+  },
+  "homepage": "https://github.com/lijinke666/circle-ci-demo#readme",
+  "devDependencies": {
+    "jest": "^26.1.0"
+  }
+}
